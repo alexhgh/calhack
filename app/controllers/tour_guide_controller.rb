@@ -1,10 +1,6 @@
 class TourGuideController < ApplicationController
-    def find_tour_guide_by_id
+    def new
     end
-    
-    def add_new_location
-    end
-    
-    def add_new_service
+    def edit
     end
 end
