@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181103201602) do
+ActiveRecord::Schema.define(version: 20181103203350) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "state"
@@ -20,18 +20,28 @@ ActiveRecord::Schema.define(version: 20181103201602) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "locations_tour_guides", id: false, force: :cascade do |t|
+    t.integer "tour_guide_id", null: false
+    t.integer "location_id",   null: false
+  end
+
+  add_index "locations_tour_guides", ["location_id"], name: "index_locations_tour_guides_on_location_id"
+  add_index "locations_tour_guides", ["tour_guide_id"], name: "index_locations_tour_guides_on_tour_guide_id"
+
   create_table "tour_guides", force: :cascade do |t|
     t.text     "bio"
     t.string   "service_name"
     t.text     "service_detail"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "user_id"
   end
 
   create_table "tourists", force: :cascade do |t|
     t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
