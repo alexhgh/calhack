@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181103201058) do
+ActiveRecord::Schema.define(version: 20181103201602) do
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "state"
+    t.string   "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tour_guides", force: :cascade do |t|
+    t.text     "bio"
+    t.string   "service_name"
+    t.text     "service_detail"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "tourists", force: :cascade do |t|
+    t.text     "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
