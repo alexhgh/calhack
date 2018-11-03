@@ -1,0 +1,10 @@
+= form_for @tour_guide do |f|
+  - if @tour_guide.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@tour_guide.errors.count, "error")} prohibited this tour_guide from being saved:"
+      %ul
+        - @tour_guide.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'
