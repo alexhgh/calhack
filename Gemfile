@@ -27,6 +27,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Log in 
 gem 'devise'
 
+# CSS
+gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons' 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
