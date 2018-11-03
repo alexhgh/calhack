@@ -1,12 +1,104 @@
-%nav
-  .nav-wrapper
-    %a.brand-logo{:href => "#"} Logo
-    %ul#nav-mobile.right.hide-on-med-and-down
-      %li
-        %a{:href => "sass.html"} About Us
-      %li
-        %a{:href => "badges.html"} Feature
-      %li
-        %a{:href => "/users/sign_in"} Login
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.erb
+%html{:lang => "en"}
+  %head
+    %title Cal Hack
+    / CSS
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+  %body
+    %nav
+      .nav-wrapper
+        %a.brand-logo{:href => "#"} Trip App
+        %ul#nav-mobile.right.hide-on-med-and-down
+          %li
+            %a{:href => "sass.html"} About Us
+          %li
+            %a{:href => "badges.html"} Feature
+          %li
+            %a{:href => "/users/sign_in"} Login
+    #index-banner.parallax-container
+      .section.no-pad-bot
+        .parallax
+          %img{:src => "background3.jpg"}/
+        .container
+          %br/
+          %br/
+          %h1.header.center.teal-text.text-lighten-2 Cal Hack
+          .row.center
+            %h5.header.col.s12.light Find your trip partner
+          .row.center
+            %a#download-button.btn-large.waves-effect.waves-light.teal.lighten-1{:href => "/users/sign_in"} Get Started
+          %br/
+          %br/
+
+    .container
+      .section
+        .row
+          .col.s12.m4
+            .icon-block
+              %h2.center.brown-text
+                %i.material-icons location_on
+              %h5.center Find your Tour Guide
+              %p.light Visiting a place and looking for something fun?
+          .col.s12.m4
+            .icon-block
+              %h2.center.brown-text
+                %i.material-icons face
+              %h5.center Host a service
+              %p.light Wanna help others to know your place better?
+          .col.s12.m4
+            .icon-block
+              %h2.center.brown-text
+                %i.material-icons group
+              %h5.center Tour Pooling
+              %p.light Wanna hang out with some new firend on a trip?
+    .parallax-container.valign-wrapper
+      .section.no-pad-bot
+        .container
+          .row.center
+            %h5.header.col.s12.light FIELDDDD
+      .parallax
+        %img{:src => "background2.jpg"}/
+    .container
+      .section
+        .row
+          .col.s12.center
+            %h3
+              %i.mdi-content-send.brown-text
+            %h4 Contact Us
+            %p.left-align.light EMAIL?
+    .parallax-container.valign-wrapper
+      .section.no-pad-bot
+        .container
+          .row.center
+            %h5.header.col.s12.light EXTRA FIELD for now
+      .parallax
+        %img{:src => "background1.jpg"}/
+    %footer.page-footer.teal
+      .container
+        .row
+          .col.l6.s12
+            %h5.white-text About Us
+            %p.grey-text.text-lighten-4 Cal Hack
+          .col.l3.s12
+            %h5.white-text Member
+            %ul
+              %li
+                %a.white-text{:href => "#!"} Link 1
+              %li
+                %a.white-text{:href => "#!"} Link 2
+              %li
+                %a.white-text{:href => "#!"} Link 3
+              %li
+                %a.white-text{:href => "#!"} Link 4
+          .col.l3.s12
+            %h5.white-text Connect
+            %ul
+              %li
+                %a.white-text{:href => "#!"} Link 1
+              %li
+                %a.white-text{:href => "#!"} Link 2
+              %li
+                %a.white-text{:href => "#!"} Link 3
+              %li
+                %a.white-text{:href => "#!"} Link 4
+    %script{:src => "js/init.js"}
