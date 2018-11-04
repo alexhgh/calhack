@@ -1,4 +1,4 @@
-%h1 Listing tour_guides
+%h1 Your Guide service:
 
 %table
   %thead
@@ -10,10 +10,9 @@
   %tbody
     - @tour_guides.each do |tour_guide|
       %tr
-        %td= link_to 'Show', tour_guide
+        %td= link_to tour_guide.service_name
         %td= link_to 'Edit', edit_tour_guide_path(tour_guide)
-        %td= link_to 'Destroy', tour_guide, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Remove Service', tour_guide, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
-
-= link_to 'New Tour guide', new_tour_guide_path
+= link_to 'Create a new service', new_tour_guide_path

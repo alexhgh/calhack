@@ -1,5 +1,17 @@
 %h1 New tour_guide
 
-= render 'form'
+
+= form_for @tour_guide, url: {action: "create"} do |f|
+  = f.label :service_name, 'service name'
+  = f.text_field :service_name
+  
+  = f.label :service_detail, "Service Detail"
+  = f.text_field :service_detail
+  
+  = f.label :bio, "Tell us more about yourself"
+  = f.text_field :bio
+
+  = f.submit "Create"
+
 
 = link_to 'Back', tour_guides_path

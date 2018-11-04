@@ -69,6 +69,6 @@ class TourGuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tour_guide_params
-      params.fetch(:tour_guide, {})
+      params.require(:tour_guide).permit(:service_detail, :bio, :service_name)
     end
 end
